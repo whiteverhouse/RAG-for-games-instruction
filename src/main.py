@@ -11,7 +11,7 @@ def initialize_system():
     # load environment variables
     load_dotenv()
     
-    # initialize components
+    # Initialize components
     pdf_texts = process_pdfs_in_directory("data")
     embedding_model = EmbeddingModel()
     
@@ -26,7 +26,6 @@ def initialize_system():
     embeddings = embedding_model.encode(pdf_texts)
     vector_db.add_vectors(embeddings, pdf_texts)
 
-    # create RAG query processor
     rag_processor = RAGQueryProcessor(vector_db, embedding_model, deepseek_api)
     
     return rag_processor
