@@ -1,6 +1,6 @@
 # Game Q&A RAG Chatbot
 
-A RAG-based chatbot for answering game-related questions. It parse and vectorize gamebooks of board games for info storage and retrieval, and uses DeepSeek's API for response generation and searches for relevant info in the database.
+A RAG-based chatbot for answering game-related questions. It parses and vectorizes gamebooks of board games for info storage and retrieval, uses DeepSeek's API for response generation and searches for relevant info in the database.
 
 ## Features
 - Web-based user interface with conversation history for improved interaction
@@ -38,13 +38,6 @@ A RAG-based chatbot for answering game-related questions. It parse and vectorize
 3. Open a web browser and navigate to `http://localhost:5000`
 4. Use the interface to ask questions and interact with the chatbot
 
-
-## File Structure
-
-- src/: Source code
-- data/: PDF files
-- requirements.txt: Project dependencies
-- README.md: Project info
 
 ## Notes
 - You need to put down a valid DeepSeek API key in the .env file to get the LLM to work
