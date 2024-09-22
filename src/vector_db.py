@@ -18,3 +18,8 @@ class VectorDB:
         query_vector_np = np.array([query_vector]).astype('float32')
         distances, indices = self.index.search(query_vector_np, k)
         return [self.texts[i] for i in indices[0]]
+
+    def update_vectors(self, vectors: List[List[float]], texts: List[str]):
+        self.index.reset()
+        self.texts = []
+        self.add_vectors(vectors, texts)

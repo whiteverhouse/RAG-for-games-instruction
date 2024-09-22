@@ -14,7 +14,11 @@ class RAGQueryProcessor:
         relevant_texts = self.vector_db.search(query_vector, k=3)
         
         context = "\n".join(relevant_texts)
-        prompt = f"Answer the question based on the following information:\n\n{context}\n\nQuestion: {query}\nAnswer:"
+        prompt = f"基于以下信息回答问题。如果信息不足以回答问题，请诚实地说'我没有足够的信息来回答这个问题'。\n\n背景信息：{context}\n\n问题：{query}\n回答："
         
         response = self.deepseek_api.generate_response(prompt)
-        return response
+        return response.strip()
+
+    def get_relevant_context(self, query: str) -> List[str]:
+        query_vector = self.embedding_model.encode([query])[0]
+        return self.vector_db.search(query_vector, k=3)

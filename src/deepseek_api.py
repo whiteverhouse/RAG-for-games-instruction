@@ -8,7 +8,7 @@ class DeepSeekAPI:
         response = self.client.chat.completions.create(
             model="deepseek-chat",
             messages=[
-                {"role": "system", "content": "You are an assistant specialized in answering game-related questions."},
+                {"role": "system", "content": "You are an assistant specialized in answering game-related questions.　Answer user's question in concise and simple way."},
                 {"role": "user", "content": prompt},
             ],
             stream=False
