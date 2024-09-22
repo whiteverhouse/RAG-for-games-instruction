@@ -1,6 +1,6 @@
 # Game Q&A RAG Chatbot
 
-A RAG-based chatbot for answering game-related questions. It Parse and vectorize gamebooks of board games for info storage and retrieval, and uses DeepSeek's API for response generation and searches for relevant info in the database.
+A RAG-based chatbot for answering game-related questions. It parse and vectorize gamebooks of board games for info storage and retrieval, and uses DeepSeek's API for response generation and searches for relevant info in the database.
 
 ## Features
 - Web-based user interface with conversation history for improved interaction
